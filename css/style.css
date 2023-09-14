@@ -51,7 +51,7 @@ body {
   align-items: center; }
   @media only screen and (max-width: 61.25em) {
     .section--form {
-      margin: 15rem auto; } }
+      margin: 20rem auto; } }
 
 .section--complete {
   display: flex;
