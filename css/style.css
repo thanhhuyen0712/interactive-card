@@ -1,0 +1,211 @@
+.hidden {
+  display: none !important; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 78.15em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 61.25em) {
+    html {
+      font-size: 37.5%; } }
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  line-height: 1.6;
+  font-weight: 500; }
+
+.container {
+  max-width: 80%;
+  margin: 12rem auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  overflow: hidden; }
+  @media only screen and (max-width: 78.15em) {
+    .container {
+      max-width: 95%; } }
+  @media only screen and (max-width: 61.25em) {
+    .container {
+      max-width: 100%;
+      margin: 0;
+      box-shadow: none;
+      grid-template-columns: 100vw; } }
+
+.section--cards {
+  position: relative; }
+
+.section--form {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  @media only screen and (max-width: 61.25em) {
+    .section--form {
+      margin: 15rem auto; } }
+
+.section--complete {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+@media only screen and (max-width: 61.25em) {
+  .img--background {
+    width: 100vw;
+    height: 30vh; } }
+
+.card--front {
+  color: white;
+  font-size: 1.5rem;
+  background-image: url(../images/bg-card-front.png);
+  background-size: cover;
+  width: 40rem;
+  height: 20rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+  position: absolute;
+  top: 25%;
+  left: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center; }
+  @media only screen and (max-width: 78.15em) {
+    .card--front {
+      bottom: 32%;
+      left: 45%; } }
+  @media only screen and (max-width: 61.25em) {
+    .card--front {
+      top: 50%;
+      left: 50%;
+      transform: translate(-55%, 50%);
+      z-index: 1000; } }
+  .card--front .dot--large {
+    content: "";
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: white;
+    margin-bottom: 3rem;
+    margin-right: 5px; }
+  .card--front .dot--small {
+    content: "";
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    border: 0.5px solid white;
+    margin-bottom: 3rem; }
+  .card--front__number {
+    width: 100%;
+    flex-grow: 1;
+    font-size: 2rem;
+    letter-spacing: 4.4px; }
+  .card--front__name {
+    width: 50%;
+    margin-right: auto; }
+
+.card--back {
+  color: white;
+  font-size: 1.2rem;
+  background-image: url(../images/bg-card-back.png);
+  background-size: cover;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  width: 40rem;
+  height: 20rem;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 25%;
+  left: 60%; }
+  @media only screen and (max-width: 78.15em) {
+    .card--back {
+      bottom: 32%;
+      left: 55%; } }
+  @media only screen and (max-width: 61.25em) {
+    .card--back {
+      top: 50%;
+      left: 50%;
+      transform: translate(-40%, -20%); } }
+  .card--back__cvc {
+    color: white;
+    position: absolute;
+    top: 50%;
+    right: 12%; }
+
+.form {
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  overflow: hidden; }
+  @media only screen and (max-width: 61.25em) {
+    .form {
+      max-width: 90%; } }
+  .form__group {
+    display: flex;
+    flex-direction: column;
+    color: #21092f;
+    gap: 0.5rem; }
+  .form__label {
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+  .form__input {
+    font-family: "Space Grotesk", sans-serif;
+    border: 1px solid #dedddf;
+    border-radius: 5px;
+    padding: 1rem; }
+  .form .expired {
+    display: flex; }
+    .form .expired .form__group {
+      width: 50%; }
+    .form .expired__time {
+      display: flex;
+      gap: 1rem;
+      margin-right: 2rem; }
+      .form .expired__time .form__input {
+        width: 50%; }
+  .form .button {
+    font-family: "Space Grotesk", sans-serif;
+    color: white;
+    background-color: #21092f;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-top: 1.2rem; }
+
+.error {
+  color: red;
+  height: 2rem; }
+
+.complete {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .complete .icon {
+    margin-bottom: 3rem; }
+  .complete .thankyou--message {
+    text-transform: uppercase;
+    color: #21092f;
+    font-size: 3.2rem;
+    letter-spacing: 5px;
+    margin-bottom: 1.2rem; }
+  .complete .complete--message {
+    color: #8e8593;
+    font-size: 2rem;
+    margin-bottom: 3rem; }
+  .complete .button {
+    width: 100%;
+    color: white;
+    background-color: #21092f;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-top: 1.2rem; }

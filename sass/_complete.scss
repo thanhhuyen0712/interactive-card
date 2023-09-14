@@ -1,0 +1,32 @@
+.complete {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .icon {
+    margin-bottom: 3rem;
+  }
+
+  .thankyou--message {
+    text-transform: uppercase;
+    color: $color-very-dark-violet;
+    font-size: 3.2rem;
+    letter-spacing: 5px;
+    margin-bottom: 1.2rem;
+  }
+  .complete--message {
+    color: $color-dark-grayfish-violet;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .button {
+    width: 100%;
+    color: $color-white;
+    background-color: $color-very-dark-violet;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-top: 1.2rem;
+  }
+}
