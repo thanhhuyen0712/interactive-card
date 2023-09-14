@@ -34,6 +34,10 @@
     z-index: 1000;
   }
 
+  @media only screen and (max-width: $bp-smallest) {
+    width: 35rem;
+  }
+
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -63,6 +67,10 @@
     flex-grow: 1;
     font-size: 2rem;
     letter-spacing: 4.4px;
+
+    @media only screen and (max-width: $bp-smallest) {
+      letter-spacing: 2.2px;
+    }
   }
 
   &__name {
@@ -96,10 +104,19 @@
     transform: translate(-40%, -20%);
   }
 
+  @media only screen and (max-width: $bp-smallest) {
+    width: 35rem;
+  }
+
   &__cvc {
     color: $color-white;
     position: absolute;
     top: 50%;
     right: 12%;
+
+    @media only screen and (max-width: $bp-smallest) {
+      top: 45%;
+      right: 10%;
+    }
   }
 }

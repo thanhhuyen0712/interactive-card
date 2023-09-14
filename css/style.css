@@ -90,6 +90,9 @@ body {
       left: 50%;
       transform: translate(-55%, 50%);
       z-index: 1000; } }
+  @media only screen and (max-width: 31.25em) {
+    .card--front {
+      width: 35rem; } }
   .card--front .dot--large {
     content: "";
     height: 3rem;
@@ -110,6 +113,9 @@ body {
     flex-grow: 1;
     font-size: 2rem;
     letter-spacing: 4.4px; }
+    @media only screen and (max-width: 31.25em) {
+      .card--front__number {
+        letter-spacing: 2.2px; } }
   .card--front__name {
     width: 50%;
     margin-right: auto; }
@@ -135,11 +141,18 @@ body {
       top: 50%;
       left: 50%;
       transform: translate(-40%, -20%); } }
+  @media only screen and (max-width: 31.25em) {
+    .card--back {
+      width: 35rem; } }
   .card--back__cvc {
     color: white;
     position: absolute;
     top: 50%;
     right: 12%; }
+    @media only screen and (max-width: 31.25em) {
+      .card--back__cvc {
+        top: 45%;
+        right: 10%; } }
 
 .form {
   max-width: 40%;
