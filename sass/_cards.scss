@@ -1,6 +1,4 @@
 .img--background {
-  // background-size: contain;
-
   @media only screen and (max-width: $bp-medium) {
     width: 100vw;
     height: 30vh;
@@ -13,24 +11,14 @@
   background-size: cover;
   width: 40rem;
   height: 20rem;
+  margin-left: -30rem;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   padding: 1.5rem;
 
-  position: absolute;
-  top: 25%;
-  left: 40%;
-
-  @media only screen and (max-width: $bp-large) {
-    bottom: 32%;
-    left: 45%;
-  }
-
   @media only screen and (max-width: $bp-medium) {
-    top: 50%;
-    left: 50%;
-    transform: translate(-55%, 50%);
-
+    margin-left: -10rem;
+    margin-top: -25rem;
     z-index: 1000;
   }
 
@@ -87,21 +75,13 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   width: 40rem;
   height: 20rem;
+  margin-left: -25rem;
   border-radius: 5px;
-
-  position: absolute;
-  bottom: 25%;
-  left: 60%;
-
-  @media only screen and (max-width: $bp-large) {
-    bottom: 32%;
-    left: 55%;
-  }
+  position: relative;
 
   @media only screen and (max-width: $bp-medium) {
-    top: 50%;
-    left: 50%;
-    transform: translate(-40%, -20%);
+    margin-left: 10rem;
+    margin-top: -30rem;
   }
 
   @media only screen and (max-width: $bp-smallest) {

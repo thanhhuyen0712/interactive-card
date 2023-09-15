@@ -16,58 +16,43 @@ const cardMonth = document.querySelector(".card--front__date .month");
 const cardYear = document.querySelector(".card--front__date .year");
 const cardCVC = document.querySelector(".card--back__cvc");
 
-// userName.addEventListener("input", function () {
-//   if (userName.value === "") {
-//     document.querySelector("#name + .error").textContent = "Can't be blank";
-//   } else {
-//     document.querySelector("#name + .error").textContent = "";
-//   }
-// });
+userName.addEventListener("input", function () {
+  if (userName.value === "") {
+    cardName.textContent = "Jane Appleseed";
+  } else {
+    cardName.textContent = userName.value;
+  }
+});
 
-// number.addEventListener("input", function () {
-//   if (number.value === "") {
-//     document.querySelector(".form__input--number + .error").textContent =
-//       "Can't be blank";
-//   } else {
-//     document.querySelector(".form__input--number + .error").textContent = "";
-//   }
+number.addEventListener("input", function () {
+  if (number.value === "") {
+    cardNumber.textContent = "0000 0000 0000 0000";
+  } else {
+    cardNumber.textContent = number.value;
+  }
+});
 
-//   if (!number.validity.valid) {
-//     document.querySelector("#number + .error").textContent =
-//       "Wrong format, numbers only";
-//   } else {
-//     document.querySelector("#number + .error").textContent = "";
-//   }
-// });
+expiredMonth.addEventListener("input", function () {
+  if (expiredMonth.value === "") {
+    cardMonth.textContent = "00";
+  } else {
+    cardMonth.textContent = expiredMonth.value;
+  }
+});
 
-// expiredMonth.addEventListener("input", function () {
-//   if (expiredMonth.value === "") {
-//     document.querySelector(".error--expired").textContent = "Can't be blank";
-//   } else {
-//     document.querySelector(".error--expired").textContent = "";
-//   }
+expiredYear.addEventListener("input", function () {
+  if (expiredYear.value === "") {
+    cardYear.textContent = "00";
+  } else {
+    cardYear.textContent = expiredYear.value;
+  }
+});
 
-//   if (expiredMonth.value < 1 || expiredMonth.value > 12) {
-//     document.querySelector(".error--expired").textContent = "Invalid month";
-//   } else {
-//     document.querySelector(".error--expired").textContent = "";
-//   }
-// });
-
-// expiredYear.addEventListener("input", function () {
-//   if (expiredYear.value === "") {
-//     document.querySelector(".error--expired").textContent = "Can't be blank";
-//   } else {
-//     document.querySelector(".error--expired").textContent = "";
-//   }
-// });
-// cvc.addEventListener("input", function () {
-//   if (cvc.value === "") {
-//     document.querySelector("#cvc + .error").textContent = "Can't be blank";
-//   } else {
-//     document.querySelector("#cvc + .error").textContent = "";
-//   }
-// });
+cvc.addEventListener("input", function () {
+  if (cvc.value === "") {
+    cardCVC.textContent = "000";
+  } else cardCVC.textContent = cvc.value;
+});
 
 userName.addEventListener("blur", function () {
   if (userName.value === "") {
@@ -75,7 +60,6 @@ userName.addEventListener("blur", function () {
   } else {
     document.querySelector("#name + .error").textContent = "";
   }
-  cardName.textContent = userName.value;
 });
 
 number.addEventListener("blur", function () {
@@ -92,8 +76,6 @@ number.addEventListener("blur", function () {
   } else {
     document.querySelector("#number + .error").textContent = "";
   }
-
-  cardNumber.textContent = number.value;
 });
 
 expiredMonth.addEventListener("blur", function () {
@@ -108,8 +90,6 @@ expiredMonth.addEventListener("blur", function () {
   } else {
     document.querySelector(".error--expired").textContent = "";
   }
-
-  cardMonth.textContent = expiredMonth.value;
 });
 
 expiredYear.addEventListener("blur", function () {
@@ -118,8 +98,6 @@ expiredYear.addEventListener("blur", function () {
   } else {
     document.querySelector(".error--expired").textContent = "";
   }
-
-  cardYear.textContent = expiredYear.value;
 });
 
 cvc.addEventListener("blur", function () {
@@ -128,8 +106,6 @@ cvc.addEventListener("blur", function () {
   } else {
     document.querySelector("#cvc + .error").textContent = "";
   }
-
-  cardCVC.textContent = cvc.value;
 });
 
 sectionForm.addEventListener("submit", function (e) {
