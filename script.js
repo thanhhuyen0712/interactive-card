@@ -16,6 +16,12 @@ const cardMonth = document.querySelector(".card--front__date .month");
 const cardYear = document.querySelector(".card--front__date .year");
 const cardCVC = document.querySelector(".card--back__cvc");
 
+const formatNumber = (number) =>
+  number.split("").reduce((seed, next, index) => {
+    if (index !== 0 && !(index % 4)) seed += " ";
+    return seed + next;
+  }, "");
+
 userName.addEventListener("input", function () {
   if (userName.value === "") {
     cardName.textContent = "Jane Appleseed";
@@ -28,7 +34,7 @@ number.addEventListener("input", function () {
   if (number.value === "") {
     cardNumber.textContent = "0000 0000 0000 0000";
   } else {
-    cardNumber.textContent = number.value;
+    number.value = formatNumber(number.value.replaceAll(" ", ""));
   }
 });
 
