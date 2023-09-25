@@ -1,8 +1,14 @@
 .form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-  overflow: hidden;
+  // display: flex;
+  // flex-direction: column;
+  // gap: 1.2rem;
+  // overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  align-items: center;
+  row-gap: 1.2rem;
+  column-gap: 1.2rem;
 
   // @media only screen and (max-width: $bp-medium) {
   //   max-width: 90%;
@@ -11,42 +17,69 @@
   &__group {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+
     color: $color-very-dark-violet;
     gap: 0.5rem;
+
+    &--name,
+    &--number {
+      grid-column: 1/-1;
+    }
+
+    &--month {
+      grid-column: 1 / span 1;
+    }
+
+    &--year {
+      grid-column: 2 / span 1;
+    }
+    &--cvc {
+      grid-column: 3 / span 1;
+    }
   }
 
   &__label {
     text-transform: uppercase;
     letter-spacing: 1px;
+    height: 1.6rem;
   }
 
   &__input {
-    font-family: "Space Grotesk", sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     border: 1px solid $color-light-grayfish-violet;
     border-radius: 5px;
     padding: 1rem;
   }
 
-  .expired {
-    display: flex;
+  // .expired {
+  //   display: flex;
 
-    .form__group {
-      width: 50%;
-    }
+  //   .form__group {
+  //     width: 50%;
+  //   }
 
-    &__time {
-      display: flex;
-      gap: 1rem;
-      margin-right: 2rem;
+  //   &__time {
+  //     display: flex;
+  //     gap: 1rem;
+  //     margin-right: 2rem;
 
-      .form__input {
-        width: 50%;
-      }
-    }
-  }
+  //     .form__input {
+  //       // width: 50%;
+  //     }
+  //   }
+
+  //   &__group {
+  //     display: flex;
+  //     flex-direction: column;
+
+  //     width: 50%;
+  //   }
+  // }
 
   .button {
-    font-family: "Space Grotesk", sans-serif;
+    grid-column: 1/-1;
+    font-family: 'Space Grotesk', sans-serif;
     color: $color-white;
     background-color: $color-very-dark-violet;
     border-radius: 5px;

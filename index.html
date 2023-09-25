@@ -61,7 +61,7 @@
 
       <section class="section--form">
         <form action="" class="form">
-          <div class="form__group">
+          <div class="form__group form__group--name">
             <label for="name" class="form__label">Cardholder name</label>
             <input
               type="text"
@@ -73,10 +73,10 @@
             <span class="error"></span>
           </div>
 
-          <div class="form__group">
+          <div class="form__group form__group--number">
             <label for="number" class="form__label">Card number</label>
             <input
-              type="tel"
+              type="text"
               inputmode="numeric"
               maxlength="19"
               pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}"
@@ -88,42 +88,46 @@
             <span class="error"></span>
           </div>
 
-          <div class="expired">
-            <div class="form__group">
-              <label for="" class="form__label">Exp. date (mm/yy)</label>
-              <div class="expired__time">
-                <input
-                  type="number"
-                  maxlength="2"
-                  placeholder="MM"
-                  class="form__input expired__month"
-                  min="1"
-                  max="12"
-                  required
-                />
-                <input
-                  type="number"
-                  maxlength="2"
-                  placeholder="YY"
-                  class="form__input expired__year"
-                  required
-                />
-              </div>
-              <span class="error error--expired"></span>
-            </div>
+          <div class="form__group form__group--month">
+            <label for="" class="form__label">Exp. date (mm/yy)</label>
+            <input
+              type="text"
+              inputmode="numeric"
+              maxlength="2"
+              placeholder="MM"
+              class="form__input expired__month"
+              min="1"
+              max="12"
+              required
+            />
+            <span class="error"></span>
+          </div>
 
-            <div class="form__group">
-              <label for="cvc" class="form__label">CVC</label>
-              <input
-                type="number"
-                maxlength="3"
-                placeholder="e.g. 123"
-                class="form__input"
-                id="cvc"
-                required
-              />
-              <span class="error"></span>
-            </div>
+          <div class="form__group form__group--year">
+            <label for="" class="form__label"></label>
+            <input
+              type="text"
+              inputmode="numeric"
+              maxlength="2"
+              placeholder="YY"
+              class="form__input expired__year"
+              required
+            />
+            <span class="error"></span>
+          </div>
+
+          <div class="form__group form__group--cvc">
+            <label for="cvc" class="form__label">CVC</label>
+            <input
+              type="text"
+              inputmode="numeric"
+              maxlength="3"
+              placeholder="e.g. 123"
+              class="form__input"
+              id="cvc"
+              required
+            />
+            <span class="error"></span>
           </div>
 
           <input type="submit" value="Confirm" class="button" />

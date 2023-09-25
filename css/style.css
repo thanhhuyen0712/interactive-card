@@ -21,7 +21,7 @@ html {
       font-size: 37.5%; } }
 
 body {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   line-height: 1.6;
   font-weight: 500; }
 
@@ -148,35 +148,37 @@ body {
         right: 10%; } }
 
 .form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-  overflow: hidden; }
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  row-gap: 1.2rem;
+  column-gap: 1.2rem; }
   .form__group {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     color: #21092f;
     gap: 0.5rem; }
+    .form__group--name, .form__group--number {
+      grid-column: 1/-1; }
+    .form__group--month {
+      grid-column: 1 / span 1; }
+    .form__group--year {
+      grid-column: 2 / span 1; }
+    .form__group--cvc {
+      grid-column: 3 / span 1; }
   .form__label {
     text-transform: uppercase;
-    letter-spacing: 1px; }
+    letter-spacing: 1px;
+    height: 1.6rem; }
   .form__input {
-    font-family: "Space Grotesk", sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     border: 1px solid #dedddf;
     border-radius: 5px;
     padding: 1rem; }
-  .form .expired {
-    display: flex; }
-    .form .expired .form__group {
-      width: 50%; }
-    .form .expired__time {
-      display: flex;
-      gap: 1rem;
-      margin-right: 2rem; }
-      .form .expired__time .form__input {
-        width: 50%; }
   .form .button {
-    font-family: "Space Grotesk", sans-serif;
+    grid-column: 1/-1;
+    font-family: 'Space Grotesk', sans-serif;
     color: white;
     background-color: #21092f;
     border-radius: 5px;
